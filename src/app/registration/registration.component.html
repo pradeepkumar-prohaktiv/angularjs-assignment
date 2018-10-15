@@ -1,0 +1,37 @@
+
+<div class="col-md-4 col-md-offset-4 border-form">
+    <div class="alert alert-danger" *ngIf="errorMsg">{{ errorMsg }}</div>
+
+    <form [formGroup]="myForm">
+        <div class="form-group">
+            <input type="text" formControlName="firstname" class="form-control" placeholder="username">
+            <span class="help-block" *ngIf="!myForm.get('firstname').valid && myForm.get('firstname').touched">Enter Correct firstname</span>
+
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="lastname" class="form-control" placeholder="lastname">
+            <span class="help-block" *ngIf="!myForm.get('lastname').valid && myForm.get('lastname').touched">Enter Correct Username</span>
+
+        </div>
+        <div class="form-group">
+            <input type="text" formControlName="email"  class="form-control" placeholder="email">
+            <span class="help-block" *ngIf="!myForm.get('email').valid && myForm.get('email').touched">Enter Valid Email</span>
+
+        </div>
+        <div class="form-group">
+            <input type="password" formControlName="password"  class="form-control" placeholder="password">
+            <span class="help-block" *ngIf="!myForm.get('password').valid && myForm.get('password').touched">Enter valid password</span>
+
+        </div>
+        <div class="form-group">
+            <input type="password" formControlName="conformpassword"  class="form-control" placeholder="Conform Password">
+            <span class="help-block" *ngIf="!myForm.get('conformpassword').valid && myForm.get('conformpassword').touched">Enter Valid conform password</span>
+
+        </div>
+
+        <div class="form-group">
+            <button type="button" (click)="saveData()" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,22 @@
+<div class="container nopadding">
+  <div class="clearfix"></div>
+  <div class="col-md-12 text-right" *ngIf="!isLogin">
+    <a [routerLink]="[ '/', 'login' ]">Login </a>
+    <a [routerLink]="[ '/', 'registration' ]">registration </a>
+  </div>
+  <div class="clearfix" ></div>
+  <div class="col-md-12" *ngIf="isLogin">
+
+    <div class="dropdown pull-right">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">{{ firstname }}
+        <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li (click)="userLogout()">Logout</li>
+      </ul>
+    </div>
+  <!--<button type="button" class="btn btn-primary pull-right" (click)="userLogout()"></button>-->
+</div>
+  <router-outlet></router-outlet>
+
+
+</div><!-- container -->

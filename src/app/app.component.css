@@ -1,0 +1,12 @@
+.container{
+   padding: 15px;
+}
+.btn.btn-primary{
+    margin-bottom: 20px;
+}
+.odd{
+    color: red;
+}
+.even{
+    color: green;
+}

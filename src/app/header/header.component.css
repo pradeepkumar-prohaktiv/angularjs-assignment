@@ -1,0 +1,8 @@
+.dropdown-menu li{
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.col-md-12.text-right a:first-child{
+    margin-right: 10px;
+}

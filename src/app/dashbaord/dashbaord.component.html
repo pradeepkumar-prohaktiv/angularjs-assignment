@@ -1,0 +1,37 @@
+
+<div class="clearfix"></div>
+<div class="alert alert-danger" *ngIf="errorMsg">{{ errorMsg }}</div>
+<hr>
+<div class="col-md-12">
+
+  <div class="col-md-3">
+    <button type="btn" class="btn btn-primary" (click)="getAllProduct()">All Product</button>
+  </div>
+
+
+  <div class="col-md-3">
+    <button type="btn" class="btn btn-primary" (click)="addProduct()">Add Product</button>
+  </div>
+    <div class="col-md-3">
+        <button type="btn" class="btn btn-primary" (click)="getUserProduct()">My Product</button>
+    </div>
+
+  <div class="clearfix"></div>
+
+</div>
+
+
+<div class="clearfix"></div>
+<hr>
+<div class="clearfix"></div>
+<div class="col-md-3" *ngFor="let data of allProductData[0]">
+  <div class="product-wrap col-md-12">
+  <div class="well well-sm">{{ data.name }} </div>
+
+   <p>{{ data.description}} </p>
+      <input type="checkbox" value='{{ data.id }}'  data-md-icheck (change)="toggleVisibility(data,$event)"/>
+      <!--<input type='checkbox' value='{{ data.name }}' ng-model='user.selected'>-->
+
+      <!--<button class="btn btn-primary" (click)="addproduct(data)">Detail11</button>-->
+  </div>
+ </div>
